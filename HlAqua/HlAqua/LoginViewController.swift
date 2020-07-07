@@ -14,14 +14,12 @@ class LoginViewController: UIViewController {
     @IBAction func login(_ sender: Any) {
         guard let userName = userNameTxtfield.text else { return }
         guard let userPassword = passwordTxtfield.text else { return}
+        print(userName+":"+userPassword);
+        let host =  "http://203.162.88.116:9191"
+        let endpoint = "/api/v1/device/add"
         
-        //check for empty
-        if (userName.isEmpty || userPassword.isEmpty) {
-            displayMyAlertMessage(userMessage: "Vui lòng nhập đầy đủ thông tin")
-            return;
-        }
-    }
-    
-    
-    
+        let url = host + endpoint;
+        
+        
+}
 }
